@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="20190122130300" author="Lydia">
+
+        <createTable tableName="customer_accounts">
+            <column name="account_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="currency_code" type="varchar(4)" />
+            <column name="scheme_code" type="varchar(10)" />
+            <column name="dr_card" type="varchar(20)" />
+            <column name="cr_card" type="varchar(20)" />
+            <column name="mobile_banking_request" type="varchar(1)" />
+            <column name="cheque_book_request" type="varchar(1)" />
+            <column name="date_chq_book_requested" type="datetime" />
+            <column name="account_number" type="varchar(20)" />
+            <column name="account_status" type="varchar(20)" />
+            <column name="work_item_name" type="varchar(100)" />
+            <column name="credit_card_requested" type="varchar(6)" />
+            <column name="date_credit_card_requested" type="datetime" />
+            <column name="wealth_management_requested" type="varchar(6)" />
+            <column name="date_wealth_mgmnt_requested" type="datetime" />
+            <column name="created_at" type="datetime" />
+            <column name="updated_at" type="datetime" />
+
+            <column name="application_id" type="bigint">
+                <constraints foreignKeyName="fk_account_application_cust_acc"
+                             referencedTableName="account_application"
+                             referencedColumnNames="id" deleteCascade="true" nullable="false"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

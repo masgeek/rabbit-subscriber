@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+
+    <changeSet id="00000000000007" author="Tomiwa Ijaware">
+
+        <addColumn tableName="account_feature">
+            <column name="created_at" type="datetime" />
+            <column name="updated_at" type="datetime" />
+        </addColumn>
+
+        <addColumn tableName="applicant">
+            <column name="created_at" type="datetime" />
+            <column name="updated_at" type="datetime" />
+        </addColumn>
+
+        <addColumn tableName="application">
+            <column name="created_at" type="datetime" />
+            <column name="updated_at" type="datetime" />
+        </addColumn>
+
+        <addColumn tableName="application_image">
+            <column name="created_at" type="datetime" />
+            <column name="updated_at" type="datetime" />
+        </addColumn>
+
+        <addColumn tableName="account_application">
+            <column name="created_at" type="datetime" />
+            <column name="updated_at" type="datetime" />
+        </addColumn>
+
+        <addColumn tableName="image">
+            <column name="created_at" type="datetime" />
+            <column name="updated_at" type="datetime" />
+        </addColumn>
+    </changeSet>
+
+
+</databaseChangeLog>

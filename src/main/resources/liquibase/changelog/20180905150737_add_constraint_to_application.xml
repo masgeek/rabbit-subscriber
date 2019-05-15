@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="20180905150737" author="caleb">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <indexExists indexName="uk_account_application_identity_number" />
+                <indexExists indexName="uk_account_application_mobile_number" />
+                <indexExists indexName="uk_account_application_email" />
+            </not>
+        </preConditions>
+        <addUniqueConstraint tableName="account_application" columnNames="identity_number"
+                             constraintName="uk_account_application_identity_number"/>
+        <addUniqueConstraint tableName="account_application" columnNames="mobile_number"
+                             constraintName="uk_account_application_mobile_number"/>
+        <addUniqueConstraint tableName="account_application" columnNames="email"
+                             constraintName="uk_account_application_email"/>
+    </changeSet>
+</databaseChangeLog>

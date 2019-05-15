@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="20180914095244" author="Patrick Kayongo">
+
+        <createTable tableName="application_referral">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="application_id" type="bigint">
+                <constraints foreignKeyName="fk_application_referral_account_application" referencedTableName="account_application" referencedColumnNames="id" />
+            </column>
+
+            <column name="referral_code" type="varchar(60)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="points_status" type="char(1)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

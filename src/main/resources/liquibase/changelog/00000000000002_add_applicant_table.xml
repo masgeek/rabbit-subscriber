@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="00000000000002" author="Patrick Kayongo">
+
+        <createTable tableName="applicant">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="phone_number" type="varchar(30)"/>
+            <column name="kenyan_id_number" type="varchar(15)" />
+            <column name="passport_number" type="varchar(15)" />
+            <column name="passport_country_iso_code" type="varchar(10)" />
+            <column name="passport_issue_date" type="date" />
+            <column name="passport_expiry_date" type="date" />
+            <column name="physical_address_street" type="varchar(200)" />
+            <column name="physical_address_town" type="varchar(200)" />
+            <column name="physical_address_country_iso_code" type="varchar(10)" />
+            <column name="postal_address_box" type="varchar(200)" />
+            <column name="postal_address_postal_code" type="varchar(15)" />
+            <column name="postal_address_country" type="varchar(15)" />
+
+            <column name="first_name" type="varchar(60)" />
+            <column name="middle_name" type="varchar(60)" />
+            <column name="last_name" type="varchar(60)" />
+
+            <column name="email_address" type="varchar(100)" />
+            <column name="income_source" type="varchar(30)" />
+            <column name="kenyan_revenue_authority_pin" type="varchar(15)" />
+
+            <column name="customer_number" type="varchar(30)" />
+
+            <column name="application_id" type="int">
+                <constraints foreignKeyName="fk_applicant_application" referencedTableName="application" referencedColumnNames="id" nullable="false" unique="true" />
+            </column>
+
+        </createTable>
+
+
+
+    </changeSet>
+
+</databaseChangeLog>

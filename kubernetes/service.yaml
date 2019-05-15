@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: subscriber-service
+  labels:
+    app: subscriber-service
+spec:
+  ports:
+    - port: 9005
+      name: http
+  selector:
+    run: subscriber-service

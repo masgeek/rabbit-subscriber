@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="20181113192317" author="caleb.magiya">
+        <addColumn tableName="next_of_kins">
+            <column name="physical_address_country_code" type="varchar(100)" />
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

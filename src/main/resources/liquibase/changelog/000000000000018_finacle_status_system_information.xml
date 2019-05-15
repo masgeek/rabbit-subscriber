@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="000000000000018" author="Patrick">
+        <insert tableName="system_information">
+            <column name="key" value="FINACLE_STATUS" />
+            <column name="value" value="UP" />
+        </insert>
+    </changeSet>
+</databaseChangeLog>

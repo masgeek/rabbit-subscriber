@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="00000000000003" author="Patrick Kayongo">
+
+        <createTable tableName="account_feature">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="feature" type="varchar(30)"/>
+
+            <column name="application_id" type="int">
+                <constraints foreignKeyName="fk_account_feature_application" referencedTableName="application" referencedColumnNames="id" nullable="false" />
+            </column>
+
+        </createTable>
+
+
+
+    </changeSet>
+
+</databaseChangeLog>

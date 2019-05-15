@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="20181130142900" author="Barasa">
+
+        <createTable tableName="mpesa">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="checkout_request_id" type="varchar(100)" />
+            <column name="result_code" type="varchar(18)" />
+            <column name="response_desc" type="varchar(255)" />
+            <column name="result_description" type="varchar(255)" />
+            <column name="merchant_request_id" type="varchar(100)" />
+            <column name="response_code" type="varchar(20)" />
+            <column name="account_reference" type="varchar(50)" />
+            <column name="mobile_number" type="varchar(18)" />
+            <column name="transaction_type" type="varchar(70)" />
+            <column name="transaction_description" type="varchar(255)" />
+            <column name="source" type="varchar(18)" />
+            <column name="mpesa_receipt" type="varchar(60)" />
+            <column name="amount" type="varchar(7)" />
+            <column name="created_at" type="datetime" />
+            <column name="updated_at" type="datetime" />
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

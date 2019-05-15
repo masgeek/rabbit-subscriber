@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="201810181613000" author="Barasa">
+
+        <addColumn tableName="account_application">
+
+            <column name="city" type="varchar(20)" />
+            <column name="state" type="varchar(50)" />
+            <column name="zip_code" type="varchar(20)" />
+            <column name="physical_address_country_code" type="varchar(20)" />
+            <column name="address_line_one" type="varchar(150)" />
+            <column name="address_line_two" type="varchar(150)" />
+            <column name="is_diaspora" type="boolean" />
+
+        </addColumn>
+
+    </changeSet>
+
+</databaseChangeLog>

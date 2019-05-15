@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="00000000000001" author="Patrick Kayongo">
+
+        <createTable tableName="application">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="identifier" type="varchar(60)"/>
+        </createTable>
+
+        <createIndex indexName="idx_identifier"
+                     tableName="application"
+                     unique="true">
+            <column name="identifier" type="varchar(60)"/>
+        </createIndex>
+
+    </changeSet>
+
+</databaseChangeLog>

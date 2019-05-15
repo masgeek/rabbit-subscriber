@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:liquibase/changelog/00000000000000_add_flat_application.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/00000000000001_add_application_table.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/00000000000002_add_applicant_table.xml" relativeToChangelogFile="false" />
+
+    <include file="classpath:liquibase/changelog/00000000000003_add_account_feature_table.xml" relativeToChangelogFile="false" />
+    <include file="classpath:liquibase/changelog/00000000000004_add_account_fields_to_application.xml" relativeToChangelogFile="false" />
+    <include file="classpath:liquibase/changelog/00000000000005_add_branch_fields_to_account.xml" relativeToChangelogFile="false" />
+
+    <include file="classpath:liquibase/changelog/00000000000006_add_image_table.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/00000000000007_add_timestamps_to_tables.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/00000000000008_add_sequences_to_tables.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/00000000000009_add_table_aml_matches.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/000000000000010_add_listName_to_aml_match.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/000000000000011_add_hibernete_sequence.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/000000000000012_updates_aml_column_length.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/000000000000013_adds_branch_name_to_accountapplication.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/000000000000014_adds_workItem_name.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/000000000000015_adds_application_submission_dates.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/000000000000016_drop_unused_tables_for_application.xml" relativeToChangelogFile="false"/>
+
+    <include file="classpath:liquibase/changelog/000000000000017_system_information.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/000000000000018_finacle_status_system_information.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/000000000000019_add_irs_status.xml" relativeToChangelogFile="false"/>
+
+    <include file="classpath:liquibase/changelog/000000000000020_add_irs_sent_date.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/000000000000021_add_files_uploaded_to_dms_date.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/000000000000022_remove_files_uploaded_to_dms_date.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/20180905150737_add_constraint_to_application.xml" relativeToChangelogFile="false"/>
+
+    <include file="classpath:liquibase/changelog/000000000000023_add_addressinfo_to_tables.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:liquibase/changelog/000000000000024_add_credit_card_requested.xml" relativeToChangelogFile="false" />
+    <include file="classpath:liquibase/changelog/000000000000025_add_wealth_management_fields.xml" relativeToChangelogFile="false" />
+
+    <include file="classpath:liquibase/changelog/20180914095244_add_referral_table.xml" relativeToChangelogFile="false" />
+    <include file="/liquibase/changelog/20180919172555_add_insurance_lead_generation.xml" />
+    <include file="classpath:liquibase/changelog/20180920164200_add_document_verified.xml" relativeToChangelogFile="false" />
+    <include file="/liquibase/changelog/20180921095452_add_default_value_for_points_status.xml" />
+    <include file="/liquibase/changelog/20181009104253_add_kins_table.xml" />
+    <include file="/liquibase/changelog/20181009142400_add_currency_code_field.xml" />
+
+    <include file="classpath:liquibase/changelog/201810181613000_add_diaspora_address.xml" relativeToChangelogFile="false" />
+    <include file="classpath:liquibase/changelog/201810231522000_add_default_value_for_is_diaspora.xml" relativeToChangelogFile="false" />
+    <include file="classpath:liquibase/changelog/201810291734000_add_is_pep_field.xml" relativeToChangelogFile="false" />
+    <include file="/liquibase/changelog/20181113192317_add_physical_address_country_code_to_next_of_kin.xml" />
+
+    <include file="classpath:liquibase/changelog/201810291734000_add_is_pep_field.xml" relativeToChangelogFile="false" />
+
+    <include file="classpath:liquibase/changelog/201811051153000_add_income_bracket_response_field.xml" relativeToChangelogFile="false" />
+
+    <include file="/liquibase/changelog/20181115163959_updated_application_column_sizes.xml" />
+    <include file="/liquibase/changelog/201811291124600_add_kin_other_field_field.xml" />
+    <include file="/liquibase/changelog/201812031124600_modify_kin_other_field_column_size.xml" />
+
+    <include file="/liquibase/changelog/201812041624600_rename_application_table_cheque_column.xml" />
+    <include file="/liquibase/changelog/201812041625600_rename_application_table_wealth_column.xml" />
+
+    <include file="/liquibase/changelog/20181130142900_add_mpesa_table.xml" />
+    <include file="/liquibase/changelog/20181218123458_add_flags_for_documents_upload.xml" />
+    <include file="/liquibase/changelog/20190201140800_add_send_resume_email.xml" />
+    <include file="/liquibase/changelog/201901141240600_add_issuing_country_field.xml" />
+    <include file="/liquibase/changelog/20190118093100_add_reupload_image_date.xml" />
+    <include file="/liquibase/changelog/201901181330600_add_transaction_complete_field.xml" />
+    <include file="/liquibase/changelog/201901211103000_add_default_value_for_issuing_country.xml" />
+    <include file="/liquibase/changelog/20190122130300_add_customer_accounts_table.xml" />
+
+    <include file="/liquibase/changelog/20190130104300_modify_customer_status_column_size.xml" />
+    <include file="/liquibase/changelog/20190212105400_add_RM_column_to_referral_table.xml" />
+    <include file="/liquibase/changelog/201902141240600_add_accounts_count_tracker.xml" />
+    <include file="/liquibase/changelog/201902151240600_add_cif_column.xml" />
+    <include file="/liquibase/changelog/20190221101700_add_resume_email_sent_date.xml" />
+    <include file="/liquibase/changelog/20190222144000_add_field_to_count_no_of_resume_emails_sent.xml" />
+
+</databaseChangeLog>

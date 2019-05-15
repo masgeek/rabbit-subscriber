@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="00000000000009" author="Tomiwa" dbms="h2,oracle">
+        <createTable tableName="aml_match">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="application_id" type="bigint"/>
+            <column name="matched_field" type="varchar(50)" />
+            <column name="matched_field_value" type="varchar(50)" />
+            <column name="score" type="int" />
+            <column name="is_expired" type="int(1)" />
+            <column name="list_id" type="varchar(50)" />
+
+            <column name="created_at" type="datetime" />
+            <column name="updated_at" type="datetime" />
+        </createTable>
+
+        <createSequence sequenceName="aml_match_sequence" startValue="1000" incrementBy="1"/>
+    </changeSet>
+
+
+</databaseChangeLog>

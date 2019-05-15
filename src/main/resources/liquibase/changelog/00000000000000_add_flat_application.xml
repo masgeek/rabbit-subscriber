@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="00000000000000" author="Socrates">
+        <createTable tableName="account_application">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="identifier" type="varchar(60)"/>
+            <column name="account_creation_status" type="varchar(60)" />
+            <column name="name" type="varchar(80)" />
+            <column name="gender" type="varchar(1)" />
+            <column name="email" type="varchar(50)" />
+            <column name="identity_type" type="varchar(7)" />
+            <column name="identity_number" type="varchar(16)" />
+            <column name="date_of_birth" type="varchar(10)" />
+            <column name="mobile_number" type="varchar(15)" />
+            <column name="address_type" type="varchar(3)" />
+            <column name="communication_address" type="varchar(80)" />
+            <column name="physical_address" type="varchar(80)" />
+            <column name="po_box_number" type="varchar(6)" />
+            <column name="city_code" type="varchar(5)" />
+            <column name="postal_code" type="varchar(5)" />
+            <column name="branch_id" type="varchar(5)" />
+            <column name="occupation_code" type="varchar(5)" />
+            <column name="scheme_code" type="varchar(10)" />
+            <column name="passport_expiry_date" type="varchar(12)" />
+            <column name="passport_issue_date" type="varchar(12)" />
+            <column name="validation_check" type="varchar(1)" />
+            <column name="reason_for_failure" type="varchar(30)" />
+            <column name="dr_card" type="varchar(20)" />
+            <column name="cr_card" type="varchar(20)" />
+            <column name="mobile_banking_request" type="varchar(1)" />
+            <column name="cheque_book_request" type="varchar(1)" />
+            <column name="iprs_chk" type="varchar(3)" />
+            <column name="iprs_fail_reason" type="varchar(80)" />
+            <column name="aml_chk" type="varchar(3)" />
+            <column name="aml_response" type="varchar(80)" />
+            <column name="pep_chk" type="varchar(3)" />
+            <column name="pep_response" type="varchar(80)" />
+            <column name="account_number" type="varchar(20)" />
+            <column name="cif" type="varchar(20)" />
+            <column name="kra_pin" type="varchar(16)" />
+            <column name="first_name" type="varchar(30)" />
+            <column name="middle_name" type="varchar(30)" />
+            <column name="last_name" type="varchar(30)" />
+            <column name="physical_address_town" type="varchar(80)" />
+            <column name="income_source" type="varchar(50)" />
+
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>

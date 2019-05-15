@@ -1,0 +1,23 @@
+debug: true
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+  config: file:src/main/resources/logback-spring.xml
+server:
+  port: 9095
+spring:
+  application:
+    name: subscriber-service
+  profiles:
+    active: dev
+  liquibase:
+    change-log: "classpath:liquibase/master.xml"
+
+  rabbitmq:
+    virtual-host: "/"
+    host: 192.168.100.75
+    port: 5672
+    username: rabbitmq
+    password: rabbitmq

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="00000000000006" author="Patrick Kayongo">
+
+        <createTable tableName="image">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="mime_type" type="varchar(60)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="image_data" type="blob">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+
+        <createTable tableName="application_image">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="image_id" type="bigint">
+                <constraints foreignKeyName="fk_application_image_image" referencedTableName="image" referencedColumnNames="id" />
+            </column>
+
+            <column name="application_id" type="bigint">
+                <constraints foreignKeyName="fk_application_image_account_application" referencedTableName="account_application" referencedColumnNames="id" />
+            </column>
+
+            <column name="description" type="varchar(60)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+
+    </changeSet>
+
+
+</databaseChangeLog>
